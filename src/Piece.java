@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Piece {
+public abstract class Piece {
     private String name;
     private String color;
 
@@ -8,6 +8,8 @@ public class Piece {
         this.name = name;
         this.color = color;
     }
+
+    public abstract boolean canMove(int fromX, int fromY, int toX, int toY, ChessBoard board);
 
     public String getName() {
         return name;
