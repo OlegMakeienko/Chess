@@ -66,6 +66,15 @@ public enum ChessInitialPosition {
     }
 
     public Piece toPiece() {
-        return new Piece(name, color);
+//        switch(this) {
+//            case WHITE_KING:
+//                return new King("white");
+//            case BLACK_QUEEN:
+//                return new Queen("black");
+//            case WHITE_PAWN:
+//                return new Pawn("white");
+//            // Och så vidare för varje pjäs...
+//        }
+        return null;
     }
 }
