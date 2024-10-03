@@ -21,4 +21,8 @@ public class ChessBoard {
             setTile(position.getX(), position.getY(), position.toPiece());
         }
     }
+
+    public boolean isTileEmpty(int row, int col) {
+        return getTile(row, col) == null;
+    }
 }
