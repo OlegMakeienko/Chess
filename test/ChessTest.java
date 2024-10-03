@@ -19,4 +19,14 @@ public class ChessTest {
 
         assertEquals(ChessInitialPosition.WHITE_KING.toPiece(), board.getTile(5, 1));
     }
+
+    @Test
+    void testResetBoard() {
+        ChessBoard board = new ChessBoard();
+        board.resetBoard();
+
+        for (ChessInitialPosition position : ChessInitialPosition.values()) {
+            assertEquals(position.toPiece(), board.getTile(position.getX(), position.getY()));
+        }
+    }
 }
