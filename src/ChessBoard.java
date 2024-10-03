@@ -11,4 +11,14 @@ public class ChessBoard {
         }
         return board[row - 1][ col - 1];
     }
+
+    public void setTile(int row, int col, Piece piece) {
+        board[row - 1][col - 1] = piece;
+    }
+
+    public void resetBoard() {
+        for (ChessInitialPosition position : ChessInitialPosition.values()) {
+            setTile(position.getX(), position.getY(), position.toPiece());
+        }
+    }
 }
