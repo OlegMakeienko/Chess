@@ -1,7 +1,8 @@
+package com.makeienko;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ChessTest {
     @Test
@@ -28,5 +29,14 @@ public class ChessTest {
         for (ChessInitialPosition position : ChessInitialPosition.values()) {
             assertEquals(position.toPiece(), board.getTile(position.getX(), position.getY()));
         }
+    }
+
+    @Test
+    void canMoveToTile() {
+        ChessBoard board = new ChessBoard();
+        Piece whiteKingPiece = ChessInitialPosition.WHITE_KING.toPiece();
+        board.setTile(5, 1, whiteKingPiece);
+        assertTrue(board.isTileEmpty(6,1));
+
     }
 }
