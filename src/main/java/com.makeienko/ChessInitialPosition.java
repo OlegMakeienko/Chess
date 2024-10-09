@@ -1,3 +1,5 @@
+package com.makeienko;
+
 public enum ChessInitialPosition {
     WHITE_ROOK_1("Rook", "White", 1, 1),
     WHITE_KNIGHT_1("Knight", "White", 2, 1),
@@ -66,15 +68,45 @@ public enum ChessInitialPosition {
     }
 
     public Piece toPiece() {
-//        switch(this) {
-//            case WHITE_KING:
-//                return new King("white");
-//            case BLACK_QUEEN:
-//                return new Queen("black");
-//            case WHITE_PAWN:
-//                return new Pawn("white");
-//            // Och så vidare för varje pjäs...
-//        }
-        return null;
+        switch(this) {
+            case WHITE_KING, BLACK_KING:
+                return new King(getName(), getColor());
+//            case WHITE_QUEEN, BLACK_QUEEN:
+//                return new Queen(getName(), getColor());
+//            case WHITE_ROOK_1:
+//            case WHITE_ROOK_2:
+//            case BLACK_ROOK_1:
+//            case BLACK_ROOK_2:
+//                return new Rook(getName(), getColor());
+//            case WHITE_BISHOP_1:
+//            case WHITE_BISHOP_2:
+//            case BLACK_BISHOP_1:
+//            case BLACK_BISHOP_2:
+//                return new Bishop(getName(), getColor());
+//            case WHITE_KNIGHT_1:
+//            case WHITE_KNIGHT_2:
+//            case BLACK_KNIGHT_1:
+//            case BLACK_KNIGHT_2:
+//                return new Knight(getName(), getColor());
+//            case WHITE_PAWN_1:
+//            case WHITE_PAWN_2:
+//            case WHITE_PAWN_3:
+//            case WHITE_PAWN_4:
+//            case WHITE_PAWN_5:
+//            case WHITE_PAWN_6:
+//            case WHITE_PAWN_7:
+//            case WHITE_PAWN_8:
+//            case BLACK_PAWN_1:
+//            case BLACK_PAWN_2:
+//            case BLACK_PAWN_3:
+//            case BLACK_PAWN_4:
+//            case BLACK_PAWN_5:
+//            case BLACK_PAWN_6:
+//            case BLACK_PAWN_7:
+//            case BLACK_PAWN_8:
+//                return new Pawn(name, color, x, y);
+            default:
+                return null;
+        }
     }
 }

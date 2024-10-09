@@ -1,3 +1,5 @@
+package com.makeienko;
+
 public class ChessBoard {
     private Piece[][] board;
 
